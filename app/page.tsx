@@ -62,7 +62,7 @@ const services = [
     icon: 'Gift',
     description: 'Reliable payroll processing, statutory filings and employee benefit tracking.'
   }
-];
+] as const;
 
 const highlights = [
   { label: 'Experienced Professionals', detail: 'Senior CAs with 15+ years of advisory and compliance expertise.' },
