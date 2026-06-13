@@ -3,17 +3,18 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-slate-950/80 py-14 text-slate-300">
-      <div className="container grid gap-12 md:grid-cols-3">
+      <div className="container grid gap-12 lg:grid-cols-3">
         <div className="space-y-5">
           <p className="text-sm uppercase tracking-[0.3em] text-amber-300/90">Amit O P Sharma & Co</p>
           <p className="max-w-sm text-lg leading-8 text-slate-200">
-            Premium Chartered Accountant services committed to accuracy, compliance, and smart business guidance for Shillong professionals.
+            Trusted Chartered Accountant services for Shillong and Meghalaya, delivering audit, GST, tax and business compliance with precision.
           </p>
-          <div className="flex items-center gap-4 text-slate-300">
-            <a href="#contact" className="rounded-3xl border border-white/10 bg-slate-900/80 px-4 py-3 transition hover:border-amber-300/40 hover:text-white">
-              Schedule a Consultation
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="inline-flex rounded-full border border-white/10 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-white transition hover:border-amber-300/40 hover:text-white"
+          >
+            Request a Consultation
+          </a>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
@@ -22,8 +23,8 @@ export default function Footer() {
             <ul className="space-y-3 text-slate-300">
               <li><a href="#about" className="transition hover:text-white">About Us</a></li>
               <li><a href="#services" className="transition hover:text-white">Services</a></li>
-              <li><a href="#contact" className="transition hover:text-white">Contact</a></li>
-              <li><a href="#faq" className="transition hover:text-white">FAQ</a></li>
+              <li><a href="#reviews" className="transition hover:text-white">Reviews</a></li>
+              <li><a href="#blog" className="transition hover:text-white">Blog</a></li>
             </ul>
           </div>
           <div className="space-y-4">
@@ -31,7 +32,7 @@ export default function Footer() {
             <div className="space-y-3 text-slate-300">
               <p className="inline-flex items-center gap-2 text-slate-100">
                 <MapPin className="h-4 w-4 text-amber-300" />
-                Police Bazar, Shillong, Meghalaya
+                Police Bazar, Shillong, Meghalaya 793001
               </p>
               <p className="inline-flex items-center gap-2">
                 <Phone className="h-4 w-4 text-amber-300" />

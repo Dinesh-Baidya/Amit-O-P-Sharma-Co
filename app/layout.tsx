@@ -7,11 +7,12 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 export const metadata: Metadata = {
   title: 'Amit O P Sharma & Co | Chartered Accountant in Shillong',
   description:
-    'Professional Chartered Accountant services in Shillong. Taxation, GST, Audit, Accounting, Business Registration, Financial Advisory and Compliance Services.',
+    'Trusted Chartered Accountant firm in Shillong offering tax, GST, audit, accounting, and business advisory services for Meghalaya businesses and startups.',
+  metadataBase: new URL('https://amitopsharma-co.example.com'),
   openGraph: {
     title: 'Amit O P Sharma & Co | Chartered Accountant in Shillong',
     description:
-      'Professional Chartered Accountant services in Shillong. Taxation, GST, Audit, Accounting, Business Registration, Financial Advisory and Compliance Services.',
+      'Trusted Chartered Accountant firm in Shillong offering tax, GST, audit, accounting, and business advisory services for Meghalaya businesses and startups.',
     type: 'website',
     url: 'https://amitopsharma-co.example.com',
     images: [
@@ -21,19 +22,23 @@ export const metadata: Metadata = {
       }
     ]
   },
-  metadataBase: new URL('https://amitopsharma-co.example.com'),
   twitter: {
     card: 'summary_large_image',
     title: 'Amit O P Sharma & Co | Chartered Accountant in Shillong',
     description:
-      'Professional Chartered Accountant services in Shillong. Taxation, GST, Audit, Accounting, Business Registration, Financial Advisory and Compliance Services.'
+      'Trusted Chartered Accountant firm in Shillong offering tax, GST, audit, accounting, and business advisory services for Meghalaya businesses and startups.'
   }
 };
+
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-slate-950 text-slate-100 antialiased`}>{children}</body>
+      <body className={`${inter.className} bg-slate-950 text-slate-100 antialiased`}>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

@@ -61,9 +61,9 @@ export default function ContactForm() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <p className="text-sm uppercase tracking-[0.3em] text-amber-300/90">Advanced Contact Form</p>
-        <h2 className="text-3xl font-semibold text-white">Send us a message</h2>
-        <p className="text-slate-400">Fill out the form and our team will reach out with a tailored consultation plan.</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-amber-300/90">Schedule Your Consultation</p>
+        <h2 className="text-3xl font-semibold text-white">Start your financial clarity journey</h2>
+        <p className="text-slate-400">Complete the form and our CA team will contact you with a personalised action plan.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">

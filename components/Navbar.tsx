@@ -6,7 +6,9 @@ import { Menu, Moon, Sun, X } from 'lucide-react';
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Reviews', href: '#reviews' },
+  { label: 'Success', href: '#success' },
+  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
   { label: 'FAQ', href: '#faq' }
 ];
@@ -31,7 +33,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur-xl">
       <div className="container flex items-center justify-between py-5">
         <a href="#top" className="text-lg font-semibold tracking-tight text-white">
           Amit O P Sharma & Co
@@ -43,7 +45,13 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href="tel:+919436103734"
+            className="rounded-full border border-white/10 bg-slate-900/80 px-5 py-3 text-sm font-semibold text-white transition hover:border-amber-300/40"
+          >
+            +91 94361 03734
+          </a>
           <button
             type="button"
             onClick={toggleTheme}
@@ -52,15 +60,15 @@ export default function Navbar() {
           >
             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
-          <button
-            type="button"
-            onClick={() => setOpen((current) => !current)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 text-slate-100 transition hover:border-slate-500 lg:hidden"
-            aria-label="Toggle mobile menu"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
         </div>
+        <button
+          type="button"
+          onClick={() => setOpen((current) => !current)}
+          className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 text-slate-100 transition hover:border-slate-500 lg:hidden"
+          aria-label="Toggle mobile menu"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
       {open ? (
         <div className="border-t border-white/10 bg-slate-950/95 lg:hidden">
@@ -75,6 +83,12 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
+            <a
+              href="tel:+919436103734"
+              className="block rounded-3xl border border-amber-300/20 bg-amber-300/10 px-5 py-3 text-base font-semibold text-amber-200 transition hover:bg-amber-300/15"
+            >
+              Call Now
+            </a>
           </div>
         </div>
       ) : null}
